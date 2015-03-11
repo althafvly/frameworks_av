@@ -150,6 +150,9 @@ cc_library_shared {
             // enable legacy camera HAL1 product option
             cflags: ["-DCAMCORDER_GRALLOC_SOURCE"],
         },
+        cant_reallocate_omx_buffers: {
+            cflags: ["-DBOARD_CANT_REALLOCATE_OMX_BUFFERS"],
+        },
     },
 
     sanitize: {
