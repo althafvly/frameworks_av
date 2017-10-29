@@ -164,9 +164,10 @@ status_t Camera3Device::initialize(CameraModule *module)
     /** Everything is good to go */
 
     mDeviceInfo = info.static_camera_characteristics;
-    mInterface = std::make_unique<HalInterface>(device);
+    return BAD_VALUE;
+    //mInterface = std::make_unique<HalInterface>(device);
 
-    return initializeCommonLocked();
+    //return initializeCommonLocked();
 }
 
 status_t Camera3Device::initialize(sp<CameraProviderManager> manager) {
