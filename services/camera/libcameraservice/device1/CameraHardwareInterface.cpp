@@ -55,15 +55,15 @@ status_t CameraHardwareInterface::initialize(CameraModule *module)
         // Open higher version camera device as HAL1.0 device.
         rc = module->openLegacy(mName.string(),
                                  CAMERA_DEVICE_API_VERSION_1_0,
-                                 (hw_device_t **)&mDevice);
+                                 (hw_device_t **)&madvise);
     } else {
-        rc = module->open(mName.string(), (hw_device_t **)&mDevice);
+        rc = module->open(mName.string(), (hw_device_t **)&madvise);
     }
     if (rc != OK) {
         ALOGE("Could not open camera %s: %d", mName.string(), rc);
         return rc;
     }
-    initHalPreviewWindow();
+    
     return rc;
 }
 

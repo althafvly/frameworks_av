@@ -3136,8 +3136,6 @@ void Camera3Device::monitorMetadata(TagMonitor::eventSource source,
  * HalInterface inner class methods
  */
 
-Camera3Device::HalInterface::HalInterface(camera3_device_t *device) :
-        mHal3Device(device) {}
 
 Camera3Device::HalInterface::HalInterface(
             sp<ICameraDeviceSession> &session,
